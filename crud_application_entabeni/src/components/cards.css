@@ -1,9 +1,8 @@
-
-
 body{
-    background-image: url('./website_background.jpg');
+    background-image : url('../images/website_background.jpg');
     background-repeat: no-repeat;
     background-size : cover;
+    background-attachment: fixed;
     font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color : #222;
 }
@@ -44,9 +43,8 @@ body{
     font-size:1rem;
     background-color: #0092d2;
     border-radius: 3rem;
-    padding : 1rem;
+    padding : 0.4rem;
     color : white;
-    box-shadow: 10px;
 }
 
 
@@ -55,6 +53,7 @@ body{
 }
 
 h1 {
+    color : black;
     padding-top : 20px;
     text-align : left;
     margin: 2rem;
@@ -88,7 +87,7 @@ h1 {
 
 .scrollable::-webkit-scrollbar-thumb {
     border-radius : 12px;
-    background-color: #f06553;
+    background-color: white;
   }
 
   .addBtn {
@@ -102,4 +101,3 @@ h1 {
 
   }
 
-  

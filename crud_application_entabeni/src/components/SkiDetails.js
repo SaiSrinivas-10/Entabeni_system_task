@@ -1,4 +1,4 @@
-import image_1 from '../images/mountains_1.jpg'
+import image_1 from '../images/card_image_default.jpg'
 
 const SkiDetails = [
     {
