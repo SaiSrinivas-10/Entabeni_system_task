@@ -38,7 +38,7 @@ const SkiDetails = [
         name : 'Steamboat Ski Resort',
         location : 'Grand County, CO',
         ski_runs : 6
-    },
+    }
 
 
 ];

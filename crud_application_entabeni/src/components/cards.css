@@ -40,7 +40,14 @@ body{
 .ski_element h2{
     margin-top : 1rem;
     font-size:1rem;
+    background-color: #f4f5e2;
+    border-radius: 3rem;
+    padding : 1rem;
+    color : black;
+    box-shadow: 10px;
+
 }
+
 
 .ski_element p{
     margin : 1rem 0 0.5rem;
@@ -73,7 +80,7 @@ h1 {
 }
 
 .udbuttons :hover {
-    background : black;
+    background : #a06550;
     color : white;
 }
 
@@ -106,4 +113,15 @@ h1 {
 .scrollable::-webkit-scrollbar-thumb {
     border-radius : 12px;
     background-color: #f06553;
+  }
+
+  .addBtn {
+    position : absolute;
+    left : 3rem;
+    background-color: #0fa10f;
+    padding : 10px;
+    border-radius: 2rem;
+    border: none;
+    color : white;
+
   }
