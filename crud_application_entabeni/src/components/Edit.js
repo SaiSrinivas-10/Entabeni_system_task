@@ -1,35 +1,28 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import SkiDetails from './SkiDetails';
-import {v4 as uuid} from 'uuid';
-import {Link,useNavigate} from 'react-router-dom';
+import {Link,useNavigate, useSearchParams} from 'react-router-dom';
 
 import image_1 from '../images/card_image_default.jpg';
 import './form.css';
 
-function Add(){
+function Edit(){
     const [name,setName] = useState('');
     const [location,setLocation] = useState('');
     const [skiruns,setSkiruns] = useState('');
     const [image,setImage] = useState([]);
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [data,setData] = useState({});
+    const [id,setId] = useState('');
 
     let history = useNavigate();
 
     const handleSubmit = (e) => {
         
         e.preventDefault();
-        const ids = uuid();
-        let uniqueId = ids.slice(0,8);
-        if(image == ''){
-            let img = image_1
-            SkiDetails.push({id : uniqueId , image : img, name : name , location : location , ski_runs : skiruns });
+        let img = image_1;
 
-        }
-        else{
-            SkiDetails.push({id : uniqueId , image : image, name : name , location : location , ski_runs : skiruns });
-        }
-
-
+        SkiDetails.push({image : image, name : name , location : location , ski_runs : skiruns });
         history("/");
     }
 
@@ -54,6 +47,18 @@ function Add(){
       }
 
 
+      useEffect(() => {
+        console.log(searchParams.get('id'))
+        var id = searchParams.get('id')
+        setId(id)
+        {SkiDetails.map((SkiItem)=>{
+            if(SkiItem.id == id){
+                console.log(SkiItem)
+                setData(SkiItem)
+            }
+        })}
+
+      },[]);
 
     return(
         <div>
@@ -61,9 +66,9 @@ function Add(){
             <form className = "form" onSubmit={(e)=>handleSubmit(e)}>
                 <h5>Enter the details</h5>
                 {/* <input type = "file" onChange={(e) => setImage(e.target.value)}></input> */}
-                <input type = "text" placeholder='Enter Name *'  autoFocus onChange = {(e) => setName(e.target.value)} required/>
-                <input type = "text" placeholder='Enter Location *'  onChange = {(e) => setLocation(e.target.value)} required/>
-                <input type = "number" placeholder='Enter Number of Ski Runs *'  onChange = {(e) => setSkiruns(e.target.value)} required/>
+                <input type = "text" placeholder= {data.name} autoFocus onChange = {(e) => setName(e.target.value)} required/>
+                <input type = "text" placeholder= {data.location}  onChange = {(e) => setLocation(e.target.value)} required />
+                <input type = "number" placeholder={data.ski_runs}  onChange = {(e) => setSkiruns(e.target.value)} required/>
                 <input type = "file" accept="image/x-png,image/gif,image/jpeg" id = "file" onChange={(e) => handleFileRead(e)}></input>
                 <button type = "submit">Submit</button>
             </form>
@@ -71,5 +76,5 @@ function Add(){
     )
 }
 
-export default Add;
+export default Edit;
 
