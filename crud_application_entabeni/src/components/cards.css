@@ -1,0 +1,109 @@
+body{
+    background-image: url('./background.png');
+    background-repeat: no-repeat;
+    background-size : cover;
+    font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color : #222;
+}
+
+
+.skilist{
+    width : 90vw;
+    max-width : 1170px;
+    margin : 5rem auto;
+    display: grid;
+    gap : 2rem;
+}
+
+@media screen and (min-width:768px){
+    
+    .skilist{
+        grid-template-columns: repeat(3, 1fr);
+        align-items : start;
+    }
+}
+    
+.ski_element{
+    background : #fff;
+    border-radius : 1rem;
+    padding : 2rem;
+    text-align : center;
+    position : relative;
+}
+
+
+.ski_element img {
+    width : 100%;
+    object-fit : cover;
+}
+
+.ski_element h2{
+    margin-top : 1rem;
+    font-size:1rem;
+}
+
+.ski_element p{
+    margin : 1rem 0 0.5rem;
+}
+
+.number{
+    position : absolute;
+    top : 0;
+    left : 0;
+    padding : 0.75rem;
+    font-size : 1rem;
+    border-bottom-right-radius:  1rem;
+    background : #1f211b;
+    color : white;
+
+}
+
+h1 {
+    text-align : left;
+    margin: 2rem;
+}
+
+
+.udbuttons button{
+    margin : 0.2rem;
+    padding : 0.7rem;
+    border-radius : 0.6rem;
+    background: #f4f5e2;
+    border: none;
+}
+
+.udbuttons :hover {
+    background : black;
+    color : white;
+}
+
+.Add button{
+    position : absolute;
+    top : 15%;
+    margin : 4rem;
+    margin-top : 10px;
+    color : white;
+    background-color: #5DBB63;
+    padding : 15px;
+    border : none;
+    border-radius: 1rem;
+    transform: translate(-50%, -50%);
+    
+}
+
+.scrollable {
+    margin-top : 60px;
+    height: 550px;
+    overflow-y: scroll;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 10px;
+    background-color: none;
+    border-radius : 12px;
+  }
+
+.scrollable::-webkit-scrollbar-thumb {
+    border-radius : 12px;
+    background-color: #f06553;
+  }
