@@ -1,5 +1,7 @@
+
+
 body{
-    background-image: url('./background.png');
+    background-image: url('./website_background.jpg');
     background-repeat: no-repeat;
     background-size : cover;
     font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -40,12 +42,11 @@ body{
 .ski_element h2{
     margin-top : 1rem;
     font-size:1rem;
-    background-color: #f4f5e2;
+    background-color: #0092d2;
     border-radius: 3rem;
     padding : 1rem;
-    color : black;
+    color : white;
     box-shadow: 10px;
-
 }
 
 
@@ -53,19 +54,8 @@ body{
     margin : 1rem 0 0.5rem;
 }
 
-.number{
-    position : absolute;
-    top : 0;
-    left : 0;
-    padding : 0.75rem;
-    font-size : 1rem;
-    border-bottom-right-radius:  1rem;
-    background : #1f211b;
-    color : white;
-
-}
-
 h1 {
+    padding-top : 20px;
     text-align : left;
     margin: 2rem;
 }
@@ -80,22 +70,8 @@ h1 {
 }
 
 .udbuttons :hover {
-    background : #a06550;
+    background : #0092d2;
     color : white;
-}
-
-.Add button{
-    position : absolute;
-    top : 15%;
-    margin : 4rem;
-    margin-top : 10px;
-    color : white;
-    background-color: #5DBB63;
-    padding : 15px;
-    border : none;
-    border-radius: 1rem;
-    transform: translate(-50%, -50%);
-    
 }
 
 .scrollable {
@@ -117,7 +93,7 @@ h1 {
 
   .addBtn {
     position : absolute;
-    left : 3rem;
+    left : 2rem;
     background-color: #0fa10f;
     padding : 10px;
     border-radius: 2rem;
@@ -125,3 +101,5 @@ h1 {
     color : white;
 
   }
+
+  
