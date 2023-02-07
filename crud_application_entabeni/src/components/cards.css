@@ -94,6 +94,7 @@ h1 {
 
   .addBtn {
     position : absolute;
+    top: 15%;
     left : 2rem;
     background-color: #0fa10f;
     padding : 10px;
@@ -103,3 +104,12 @@ h1 {
 
   }
 
+
+.editBtn a{
+    margin : 0.2rem;
+    padding : 0.7rem;
+    border-radius : 0.6rem;
+    background: #f4f5e2;
+    border: none;
+
+}

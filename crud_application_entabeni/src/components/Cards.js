@@ -1,7 +1,7 @@
 import React from 'react';
 import SkiDetails from './SkiDetails';
 import { FaLocationArrow, FaSkiing, FaPen, FaTrash} from "react-icons/fa";
-import { useNavigate,createSearchParams } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './cards.css'
 
@@ -11,10 +11,11 @@ const Cards = () => {
 
     let navigate = useNavigate();
 
-    function handleEdit(edit_id) {
-        var url = `/edit?id=${edit_id}`;
-        console.log(url)
-        navigate(url)
+    const handleEdit = (Id,Name,Location,SkiRuns) => {
+        localStorage.setItem('Id',Id);
+        localStorage.setItem('Name',Name);
+        localStorage.setItem('Location',Location);
+        localStorage.setItem('SkiRuns',SkiRuns);
     }
 
     const handleDelete = (id) =>{
@@ -26,6 +27,7 @@ const Cards = () => {
         navigate('/');
     }
 
+
     return(
         <section className='skilist'>
         {SkiDetails.map((SkiItem)=>{
@@ -35,8 +37,10 @@ const Cards = () => {
                 <h2>{SkiItem.name}</h2>
                 <p><FaLocationArrow style = {{padding : '0.2rem'}}/> {SkiItem.location}</p>
                 <p><FaSkiing/> {SkiItem.ski_runs}</p>
-                <span className="udbuttons">
-                    <button onClick = {()=> handleEdit(SkiItem.id)}><FaPen/></button>
+                <span className="udbuttons">   
+                    <Link to = {'/edit'} className = "editBtn">
+                    <button onClick = {()=> handleEdit(SkiItem.id,SkiItem.name, SkiItem.location, SkiItem.ski_runs)} Link = "{/edit}"><FaPen/></button>
+                    </Link>
                     <button onClick={() => handleDelete(SkiItem.id)}><FaTrash/></button>
                 </span>
             </article>

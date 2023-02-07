@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
 import SkiDetails from './SkiDetails';
 import {v4 as uuid} from 'uuid';
 import {Link,useNavigate} from 'react-router-dom';
@@ -20,6 +19,8 @@ function Add(){
         e.preventDefault();
         const ids = uuid();
         let uniqueId = ids.slice(0,8);
+
+        // eslint-disable-next-line
         if(image == ''){
             let img = image_1
             SkiDetails.push({id : uniqueId , image : img, name : name , location : location , ski_runs : skiruns });
@@ -37,7 +38,6 @@ function Add(){
         const file = event.target.files[0]
         const base64 = await convertBase64(file)
         setImage(base64)
-        console.log(base64)
       }
 
       const convertBase64 = (file) => {

@@ -23,23 +23,7 @@ const SkiDetails = [
         name : 'Fraser',
         location : 'Grand County, CO',
         ski_runs : 9
-    },
-
-    {
-        id : 4,
-        image : image_1,
-        name : 'Power Addiction',
-        location : 'Grand County, CO',
-        ski_runs : 8
-    },
-    {
-        id : 5,
-        image : image_1,
-        name : 'Steamboat Ski Resort',
-        location : 'Grand County, CO',
-        ski_runs : 6
     }
-
 
 ];
 
