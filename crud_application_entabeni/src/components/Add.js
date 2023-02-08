@@ -26,6 +26,7 @@ function Add(){
             SkiDetails.push({id : uniqueId , image : img, name : name , location : location , ski_runs : skiruns });
 
         }
+        
         else{
             SkiDetails.push({id : uniqueId , image : image, name : name , location : location , ski_runs : skiruns });
         }
