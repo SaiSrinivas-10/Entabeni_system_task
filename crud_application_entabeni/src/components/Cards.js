@@ -11,11 +11,12 @@ const Cards = () => {
 
     let navigate = useNavigate();
 
-    const handleEdit = (Id,Name,Location,SkiRuns) => {
+    const handleEdit = (Id,Name,Location,SkiRuns, Image) => {
         localStorage.setItem('Id',Id);
         localStorage.setItem('Name',Name);
         localStorage.setItem('Location',Location);
         localStorage.setItem('SkiRuns',SkiRuns);
+        localStorage.setItem('Image',Image)
     }
 
     const handleDelete = (id) =>{
@@ -39,7 +40,7 @@ const Cards = () => {
                 <p><FaSkiing/> {SkiItem.ski_runs}</p>
                 <span className="udbuttons">   
                     <Link to = {'/edit'} className = "editBtn">
-                    <button onClick = {()=> handleEdit(SkiItem.id,SkiItem.name, SkiItem.location, SkiItem.ski_runs)} Link = "{/edit}"><FaPen/></button>
+                    <button onClick = {()=> handleEdit(SkiItem.id,SkiItem.name, SkiItem.location, SkiItem.ski_runs, SkiItem.image)} Link = "{/edit}"><FaPen/></button>
                     </Link>
                     <button onClick={() => handleDelete(SkiItem.id)}><FaTrash/></button>
                 </span>

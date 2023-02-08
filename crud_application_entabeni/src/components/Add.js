@@ -59,11 +59,12 @@ function Add(){
         <div>
             <Link to = {'/' } style={{textDecoration : 'none'}}><h1>Entabeni Systems</h1></Link>
             <form className = "form" onSubmit={(e)=>handleSubmit(e)}>
+              <h3>Add</h3>
                 <h5>Enter the details</h5>
                 {/* <input type = "file" onChange={(e) => setImage(e.target.value)}></input> */}
                 <input type = "text" placeholder='Enter Name *'  autoFocus onChange = {(e) => setName(e.target.value)} required/>
                 <input type = "text" placeholder='Enter Location *'  onChange = {(e) => setLocation(e.target.value)} required/>
-                <input type = "number" placeholder='Enter Number of Ski Runs *'  onChange = {(e) => setSkiruns(e.target.value)} required/>
+                <input type = "number" placeholder='Enter Number of Ski Runs *'  onChange = {(e) => setSkiruns(parseInt(e.target.value))} required/>
                 <input type = "file" accept="image/x-png,image/gif,image/jpeg" id = "file" onChange={(e) => handleFileRead(e)}></input>
                 <button type = "submit">Submit</button>
             </form>
